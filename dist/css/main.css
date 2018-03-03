@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/* Вставьте ваш CSS сюда вместо этого примера */
+/* RESET */
+ul,
+li {
+  list-style: none; }
+
+ul {
+  padding: 0; }
+
+/* RESET */
+body {
+  background-image: url(../img/BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+  font-family: "Arial", "Sans-Serif"; }
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 3.6rem;
+  min-width: 30rem;
+  max-width: 64rem;
+  margin: auto; }
+
+/* HEADER */
+.header {
+  margin-bottom: 3.75rem;
+  margin-top: 1.5rem; }
+  .header .header__navigation-list {
+    list-style: none; }
+  .header .header__navigation-item {
+    text-align: center; }
+  .header .header__navigation-link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Pathway Gothic One";
+    font-size: 1.25rem; }
+  .header .header__navigation-title {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    color: #263555;
+    font-size: 2rem;
+    font-family: "Dorsa";
+    text-transform: uppercase;
+    line-height: 4.8rem;
+    margin: 0 auto; }
+  .header .header__submenu-box {
+    display: none;
+    position: absolute;
+    padding-top: 0.5rem;
+    left: 50%;
+    margin-left: -1.4rem; }
+  .header .header__submenu-item {
+    list-style: none; }
+    .header .header__submenu-item .header__submenu-link {
+      color: #263555;
+      text-decoration: none; }
+  .header .header__submenu-link {
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.4;
+    color: #263555;
+    text-transform: uppercase;
+    font-family: "Pathway Gothic One";
+    text-decoration: none; }
+  .header .header__submenu {
+    padding-left: 0; }
+  .header .header__navigation-item {
+    position: relative; }
+  .header .header__submenu-box > .header__submenu {
+    position: relative;
+    background-color: #fff; }
+    .header .header__submenu-box > .header__submenu::before {
+      content: '';
+      position: absolute;
+      display: block;
+      border: 3px solid transparent;
+      border-bottom: 4px solid #fff;
+      top: -0.4rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .header .header__submenu {
+    width: 2.875rem;
+    border-radius: 0.2rem;
+    background-color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    padding: 0.4rem;
+    text-align: center; }
+  .header .header__navigation-item:hover .header__navigation-link {
+    color: #263555; }
+  .header .header__navigation-item:hover .header__submenu-box {
+    display: block;
+    z-index: 1; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .header .header__navigation-itema {
+      font-size: 1.75rem; }
+    .header .header__submenu {
+      width: 3.75rem; }
+    .header .header__submenu-item > .header__submenu-link {
+      font-size: 1rem; }
+    .header .header__submenu-box {
+      left: 50%;
+      margin-left: -1.8rem; }
+    .header .header__navigation-title {
+      height: 6.25rem;
+      width: 6.25rem;
+      font-size: 2.6rem;
+      line-height: 6.25rem; } }
+  @media only screen and (min-width: 992px) {
+    .header .header__navigation-item > .header__navigation-link {
+      font-size: 1.5rem; }
+    .header .header__submenu {
+      width: 4.125rem; }
+    .header .header__submenu-item > .header__submenu-link {
+      font-size: 1.25rem; }
+    .header .header__submenu-box {
+      left: 50%;
+      margin-left: -2rem; }
+    .header .header__navigation-title {
+      width: 8.625rem;
+      height: 8.625rem;
+      font-size: 3.75rem;
+      line-height: 8.625rem; } }
+
+/* HEADER */
+/* GALLERY */
+.gallery {
+  padding: 4rem 3rem;
+  background-color: #fff; }
+  .gallery .gallery__main-title {
+    text-transform: uppercase;
+    font-family: "Pathway Gothic One";
+    font-size: 1.75rem; }
+  .gallery .gallery__item {
+    position: relative; }
+    .gallery .gallery__item .gallery__photo::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 2rem;
+      height: 2rem;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: url(../img/zoom.png) center no-repeat;
+      background-size: 2rem 2rem;
+      opacity: 0;
+      -webkit-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+      z-index: 3; }
+    .gallery .gallery__item .gallery__photo:hover::after {
+      opacity: 1;
+      -webkit-filter: none;
+              filter: none; }
+    .gallery .gallery__item .gallery__photo:hover {
+      -webkit-filter: brightness(0.6);
+              filter: brightness(0.6); }
+  .gallery .to_top {
+    position: fixed;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    background-color: #38AFE5;
+    right: 6.25rem;
+    bottom: 6.25rem;
+    z-index: 1; }
+    .gallery .to_top .to_top-arrow {
+      position: absolute;
+      top: 0.375rem;
+      left: 0.4375rem; }
+  @media only screen and (max-width: 768px) {
+    .gallery .gallery__item:nth-last-child(-n+3) {
+      display: none; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .gallery .gallery__item:last-child {
+      display: none; }
+    .gallery .respimg {
+      height: 10rem; } }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .gallery .respimg {
+      height: 9rem; } }
+
+/* GALLERY */
+/*  FOOTER */
+.footer__menu {
+  background-color: #1E435B;
+  padding: 1rem 1.5rem;
+  margin: 0; }
+  .footer__menu .footer__menu-list > .footer__menu-link {
+    text-decoration: none; }
+  .footer__menu .footer__menu-link:hover,
+  .footer__menu .footer__link-email:hover,
+  .footer__menu .footer__link-phone:hover {
+    color: #FFB300; }
+  .footer__menu .footer__menu-items {
+    list-style: none;
+    font-size: 0.8rem;
+    line-height: 2; }
+    .footer__menu .footer__menu-items .footer__menu-list {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .footer__menu .footer__menu-contact a {
+    text-decoration: none;
+    color: #fff; }
+  .footer__menu .footer__menu-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__menu .footer__list-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__menu .footer__menu-link,
+  .footer__menu .footer__menu-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-family: "Open Sans"; }
+  .footer__menu .footer__link-phone,
+  .footer__menu .footer__link-email {
+    font-size: 0.625rem;
+    text-transform: none; }
+    .footer__menu .footer__link-phone::before,
+    .footer__menu .footer__link-email::before {
+      content: url(../img/phone1.png);
+      margin-right: 0.5rem;
+      margin-left: 0.8rem; }
+    .footer__menu .footer__link-phone .footer__link-email::before,
+    .footer__menu .footer__link-email .footer__link-email::before {
+      content: url(../img/email.png);
+      margin-right: 0.5rem;
+      margin-left: 1.8rem; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .footer__menu .footer__menu-contact {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .footer__menu .footer__list-contacts {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .footer__menu .footer__link-phone::before {
+      content: ""; }
+    .footer__menu .footer__link-email::before {
+      content: ""; } }
+  @media only screen and (min-width: 992px) {
+    .footer__menu .footer__menu-contact {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .footer__menu .footer__list-contacts {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .footer__menu .footer__link-phone::before {
+      content: ""; }
+    .footer__menu .footer__link-email::before {
+      content: ""; } }
+
+.footer__socials {
+  padding-top: 1.5rem;
+  margin-bottom: 3.75rem; }
+  .footer__socials .svg-socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__socials .footer__svgstyle {
+    fill: #23589B;
+    cursor: pointer; }
+    .footer__socials .footer__svgstyle:hover {
+      color: #FFB300; }
+
+/* FOOTER */
